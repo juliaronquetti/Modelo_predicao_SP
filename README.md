@@ -34,12 +34,12 @@ The dataset provides data for Property Price Prediction. It contains data from 2
 |-------------------------|------|------------|-----------|-----------|------|
 | Linear log, inter (all) |	0.63 | 402047.49  | 210913.13	| 127497.35 |**0.22**|
 
-[detailed results](https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/detailed_result_tables/imoveis_results_linear_regressions.csv)
+[detailed results](https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imoveis_results_linear_regressions.png)
 
 
 <br>
 <br>
-<img src="https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/figures/imoveis_results_linear_regressions.png?raw=true" width="640">
+<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imoveis_results_linear_regressions.png?raw=true" width="640">
 
 <br>
 
