@@ -12,14 +12,14 @@ The dataset provides data for Property Price Prediction. It contains data from 2
 <img src="https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/figures/fotos_thumbs.png?raw=true" width="640">
 <br>
 
-## [Data Preparation](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_data_preparation.ipynb)
+## [Data Preparation](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/2_imoveis_data_preparation.ipynb)
 - Exploration data
 - Clean null and inconsistent data
 - Clean some outliers
 - Data conversions
 - Data encodes (except text `title`)
 
-## [Linear Regressions](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_linear_regression.ipynb)
+## [Linear Regressions](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/3_imoveis_linear_regression.ipynb)
 - Apply different Linear Models, only numeric fields are used for price estimation 
   - Simple linear model
   - Log numeric (`price`, `area_util`) 
@@ -47,7 +47,7 @@ The following interactions were selected and added in the regression model with 
 
 `area util` $\times$ `quartos`, `area util` $\times$ `quartos`, `area util` $\times$ `categoria casas`, `area util` $\times$ `price`
 
-## [ML Models Selection](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_select_ML_models.ipynb)
+## [ML Models Selection](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/4_imoveis_select_ML_models.ipynb)
 - Apply and select from different Linear Models (only numeric fields are used for price estimation)
 
 <br>
@@ -66,7 +66,7 @@ The following interactions were selected and added in the regression model with 
 
 A 5-fold cross-validation were used. 3 Best results are showed. Decision trees give MAPE = 0, but with large overffiting, thus was excluded here. Linear Regression regressions and their variants (Ridge Regression, HuberRegressor etc.) give better results than K-Nearest Neighbors, but ~0.30. They are also excluded here since a better result, ~0.22, was obtained berfore with linear regression with log transformation and iteractions. Random Forest was selected, despite a little small MAPE than Gradient Boosting because it shows better results (RMSE) in test data (here, results are over all data). For all the following executions, Random Forests with with 1,000 trees and no pruning were used.
 
-## [RandomForest: numeric features](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_ML_best_model_numeric.ipynb)
+## [RandomForest: numeric features](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/5_imoveis_ML_best_model_numeric.ipynb)
 - Apply RandomForestRegression, only numeric fields are used for price estimation
 
 <br>
@@ -85,7 +85,7 @@ A 5-fold cross-validation were used. 3 Best results are showed. Decision trees g
 
 The selected machine learning model presents a very significant gain, presenting an average of 7% (MAPE) error in price estimation compared to 22% for the best linear model. This is an error very close to that found in the literature [1][2].
 
-## [RandomForest: numeric + Yolo](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_ML_best_model_numeric_yolo.ipynb)
+## [RandomForest: numeric + Yolo](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/6_imoveis_ML_best_model_numeric_yolo.ipynb)
 - Apply RandomForestRegression, numeric fields and Yolo detected objects are used for price estimation
 
 <br>
@@ -124,7 +124,7 @@ The selected machine learning model presents a very significant gain, presenting
 
 The add of Yolo detected objects in the images as predictors does not appear to bring any significant gain to price estimation compared to the model that uses only numerical predictors. Despite this, several detected objects show a significant gain in information, and among the 15 attributes with the highest gain, 7 objects are objects detected in the images. This suggests that this approach may be potentially useful, although it seems necessary detect more relevant objects to the real estate advertising scenario, in addition to those identified as standard by Yolo.
 
-## [RandomForest: numeric + text](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_ML_best_model_numeric_text.ipynb)
+## [RandomForest: numeric + text](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/7_imoveis_ML_best_model_numeric_text.ipynb)
 - Apply RandomForestRegression, numeric fields and text used for price estimation
 
 <br>
@@ -144,7 +144,7 @@ The add of Yolo detected objects in the images as predictors does not appear to 
 <br>
 To encode the text, a TF-IDF (TfidfVectorizer) encode was used, only individual words (unigrams) and a maximum of 1000 features. Despite the better result with respect to the use of only numerical features, the difference is quite small and does not seem significant enough, but it suggests that encoding with a greater number of n-grams or other encoding methods (perhaps the use of LLMs) can lead to even better results.
 
-## [RandomForest: numeric + text + yolo](https://colab.research.google.com/github/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/imoveis_ML_best_model_numeric_text_yolo.ipynb)
+## [RandomForest: numeric + text + yolo](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/8_imoveis_ML_best_model_numeric_text_yolo.ipynb)
 - Apply RandomForestRegression, numeric fields, text and Yolo detected objects used for price estimation
 
 <br>
