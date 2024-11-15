@@ -1,58 +1,57 @@
 # Modelo_predicao_SP
 
-#### [Pre process](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/1_imoveis_preprocess.ipynb)
-- Anonymize data (extract URL information)
-- Rename files abd field names
+#### [Pré-processamento](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/1_imoveis_preprocess.ipynb)
+- Anonimizar dados (extrair informações de URL)
+- Renomear arquivos e nomes de campos
 
-## Data
+## Dados
 
-The dataset provides data for Property Price Prediction. It contains data from 23,433 properties for sale in the city of São Paulo (Brazil) advertised during April 2024. The data includes the price, over 30 property characteristics (m2, number of bedrooms, garage, etc.) and images of the listings, for a total of 407,567 images.
-
-<br>
-<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/fotos_thumbs.png?raw=true" width="640">
-<br>
-
-## [Data Preparation](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/2_imoveis_data_preparation.ipynb)
-- Exploration data
-- Clean null and inconsistent data
-- Clean some outliers
-- Data conversions
-- Data encodes (except text `title`)
-
-## [Linear Regressions](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/3_imoveis_linear_regression.ipynb)
-- Apply different Linear Models, only numeric fields are used for price estimation 
-  - Simple linear model
-  - Log numeric (`price`, `area_util`) 
-  - With Log numeric + iteracions
-  - All cases are filtered with significant regression coefs
+O conjunto de dados fornece informações para a previsão de preços de imóveis. Ele contém dados de 23.433 imóveis à venda na cidade de São Paulo (Brasil), anunciados durante o mês de abril de 2024. Os dados incluem o preço, mais de 30 características dos imóveis (m², número de quartos, garagem, etc.) e imagens dos anúncios, totalizando 407.567 imagens.
 
 <br>
+<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imagens/fotos_thumbs.png?raw=true" width="640">
+<br>
 
-- **Best result**
+## [Preparação dos dados](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/2_imoveis_data_preparation.ipynb)
+- Exploração dos dados
+- Limpeza de dados nulos e inconsistentes
+- Limpeza de alguns outliers
+- Conversões de dados
+- Codificação de dados (exceto o texto 'título')
+
+## [Regressão Linear](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/3_imoveis_linear_regression.ipynb)
+- Aplicar diferentes modelos lineares, utilizando apenas campos numéricos para a estimativa de preço
+  - Modelo linear simples
+  - Logaritmo dos campos numéricos ('price', 'area_util')
+  - Logaritmo dos campos numéricos + iterações
+  - Todos os casos são filtrados com coeficientes de regressão significativos
+
+<br>
+
+- **Melhor resultado**
 
 | Model                   | R2	 | RMSE	      | MAE	      | MedAE	    | MAPE |
 |-------------------------|------|------------|-----------|-----------|------|
 | Linear log, inter (all) |	0.63 | 402047.49  | 210913.13	| 127497.35 |**0.22**|
 
-[detailed results](https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imoveis_results_linear_regressions.png)
+[detailed results](https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imagens/imoveis_results_linear_regressions.png)
 
 
 <br>
 <br>
-<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imoveis_results_linear_regressions.png?raw=true" width="640">
+<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imagens/imoveis_results_linear_regressions.png?raw=true" width="640">
 
 <br>
 
-The following interactions were selected and added in the regression model with significant coefficients: 
-
+As seguintes interações foram selecionadas e adicionadas ao modelo de regressão com coeficientes significativos:
 `area util` $\times$ `quartos`, `area util` $\times$ `quartos`, `area util` $\times$ `categoria casas`, `area util` $\times$ `price`
 
-## [ML Models Selection](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/4_imoveis_select_ML_models.ipynb)
-- Apply and select from different Linear Models (only numeric fields are used for price estimation)
-
+## [Seleção Modelo ML](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/4_imoveis_select_ML_models.ipynb)
+- Aplicar e selecionar entre diferentes modelos lineares (apenas campos numéricos são utilizados para estimativa de preço)
+  
 <br>
 
-- **Best results**
+- **Melhores resultados**
 
 | Model                   | R2	 | RMSE	      | MAE	      | MedAE	    | MAPE |
 |-------------------------|------|------------|-----------|-----------|------|
@@ -60,7 +59,7 @@ The following interactions were selected and added in the regression model with 
 | **Random Forest     (all)**	| 0.96 | 130296.62	| 88421.16	| 57367.88	|**0.10**|
 | K-Nearest Neighbors (all)	| 0.67	| 375741.02	| 260570.99 | 	172230.00	| 0.31 |
 
-[detailed results](https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/detailed_result_tables/imoveis_results_ML_selection.csv)
+[Resultados detalhados](https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/detailed_result_tables/imoveis_results_ML_selection.csv)
 
 <br>
 
