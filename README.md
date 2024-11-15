@@ -9,7 +9,7 @@
 The dataset provides data for Property Price Prediction. It contains data from 23,433 properties for sale in the city of São Paulo (Brazil) advertised during April 2024. The data includes the price, over 30 property characteristics (m2, number of bedrooms, garage, etc.) and images of the listings, for a total of 407,567 images.
 
 <br>
-<img src="https://github.com/Rogerio-mack/Property-Price-Prediction-Sao-Paulo/blob/main/figures/fotos_thumbs.png?raw=true" width="640">
+<img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/fotos_thumbs.png?raw=true" width="640">
 <br>
 
 ## [Data Preparation](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/2_imoveis_data_preparation.ipynb)
