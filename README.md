@@ -6,7 +6,7 @@
 
 ## Dados
 
-O conjunto de dados fornece informações para a previsão de preços de imóveis. Ele contém dados de 23.433 imóveis à venda na cidade de São Paulo (Brasil), anunciados durante o mês de abril de 2024. Os dados incluem o preço, mais de 30 características dos imóveis (m², número de quartos, garagem, etc.) e imagens dos anúncios, totalizando 407.567 imagens.
+O conjunto de dados fornece informações para a previsão de preços de imóveis. Ele contém dados de 23.433 imóveis à venda na cidade de São Paulo (Brasil), anunciados durante o mês de abril de 2024. Os dados incluem o preço, mais de 30 características dos imóveis (m², número de quartos, garagem, etc.) e imagens dos anúncios, totalizando 605K imagens.
 
 <br>
 <img src="https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/imagens/fotos_thumbs.png?raw=true" width="640">
