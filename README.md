@@ -1,8 +1,8 @@
 # Análise de Modelos para Precificação de Imóveis em São Paulo
 
 ## Autores
-Júlia Ronquetti Rodrigues
-Orientador Prof. Rogério de Oliveira
+- Júlia Ronquetti Rodrigues
+- Orientador Prof. Rogério de Oliveira
 
 #### [Pré-processamento](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/1_imoveis_preprocess.ipynb)
 - Anonimizar dados (extrair informações de URL)
