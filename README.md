@@ -4,6 +4,8 @@
 - Júlia Ronquetti Rodrigues
 - Orientador Prof. Rogério de Oliveira
 
+### [Artigo](https://github.com/juliaronquetti/Modelo_predicao_SP/blob/main/Artigo%20An%C3%A1lise%20Modelo%20Precifica%C3%A7%C3%A3o.pdf)
+
 #### [Pré-processamento](https://colab.research.google.com/github/juliaronquetti/Modelo_predicao_SP/blob/main/1_imoveis_preprocess.ipynb)
 - Anonimizar dados (extrair informações de URL)
 - Renomear arquivos e nomes de campos
